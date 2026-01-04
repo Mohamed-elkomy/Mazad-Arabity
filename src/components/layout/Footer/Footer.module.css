@@ -1,0 +1,130 @@
+.footer {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  padding: 40px 60px 28px;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.footerColumn {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footerColumn h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+}
+
+.footerColumn p {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 10px;
+}
+
+.footerColumn ul li a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 16px;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.footerColumn ul li a:hover {
+  color: var(--accent);
+  transform: translateX(-3px);
+}
+
+.footerLogo img {
+  width: 140px;
+}
+
+.footer hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 30px 0 18px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 992px) {
+  .footer {
+    padding: 40px 28px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 36px 20px 22px;
+  }
+
+  .footerColumn {
+    width: 100%;
+    text-align: right;
+  }
+
+  .footerLogo img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* ================= Scroll To Top ================= */
+.scrollTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: var(--accent);
+  color: #000;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-base);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scrollTopBtn:hover {
+  transform: translateY(-4px);
+}
+
+.scrollTopBtn:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+}

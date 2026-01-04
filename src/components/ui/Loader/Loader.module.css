@@ -1,0 +1,61 @@
+.loaderOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(255, 255, 255, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.loaderCard {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: 22px 32px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.loaderLogo {
+  width: 140px;
+  max-width: 60vw;
+  height: auto;
+}
+
+.loaderDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.loaderText {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loaderDot {
+    animation: none;
+  }
+}

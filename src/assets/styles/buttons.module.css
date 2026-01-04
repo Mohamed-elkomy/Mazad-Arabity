@@ -1,0 +1,42 @@
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+
+  background: var(--primary);
+  color: var(--white);
+
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: background var(--transition), transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+/* Hover */
+.primaryBtn:hover {
+  background: #0c2f61; /* أغمق سنة من primary */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  color: var(--white);
+}
+
+/* Active */
+.primaryBtn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Focus (Accessibility) */
+.primaryBtn:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 3px;
+}

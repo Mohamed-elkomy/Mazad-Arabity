@@ -1,0 +1,206 @@
+/* =========================
+   Fonts – IBM Plex Sans Arabic
+========================= */
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/src/assets/fonts/IBM/IBMPlexSansArabic-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/src/assets/fonts/IBM/IBMPlexSansArabic-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/src/assets/fonts/IBM/IBMPlexSansArabic-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   Design Tokens – Mazad Arabity
+========================= */
+:root {
+  /* Brand */
+  --primary: #0f3c7d;
+  --primary-dark: #0c2f61;
+  --primary-light: #e6eef9;
+
+  /* Neutrals */
+  --black: #0f172a;
+  --white: #ffffff;
+  --gray: #f5f7fa;
+
+  /* Text */
+  --text-main: var(--black);
+  --text-muted: #64748b;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  /* Motion */
+  --transition-fast: 0.18s ease;
+  --transition: 0.3s ease;
+
+  /* Layout */
+  --container: 1200px;
+
+  /* Typography */
+  --fs-h1: clamp(32px, 4vw, 46px);
+  --fs-h2: clamp(26px, 3vw, 34px);
+  --fs-h3: 20px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+}
+
+/* =========================
+   Reset
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  background: var(--white);
+  color: var(--text-main);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Root */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   Layout
+========================= */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* =========================
+   Typography
+========================= */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  font-size: var(--fs-body);
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* =========================
+   Links & Media
+========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   Buttons (Custom – Bootstrap-safe)
+========================= */
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), background var(--transition);
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Utilities
+========================= */
+.bg-light {
+  background: var(--gray);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* =========================
+   Accessibility
+========================= */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}

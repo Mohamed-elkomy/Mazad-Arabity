@@ -1,0 +1,188 @@
+/* ================= Base ================= */
+.hero {
+  padding: 110px 0 80px;
+  overflow: hidden;
+  animation: fadeUp 0.8s ease both;
+}
+
+/* ================= Text ================= */
+.heroRight {
+  text-align: right;
+}
+
+.title {
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 22px;
+  margin: 14px 0 0;
+  color: var(--text-muted);
+}
+
+.desc {
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 18px 0 0;
+}
+
+/* ================= Store Buttons ================= */
+.storeButtons {
+  margin-top: 32px;
+  display: flex;
+  gap: 18px;
+}
+
+.storeButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform var(--transition), filter var(--transition);
+}
+
+.storeButton img {
+  width: 150px;
+}
+
+.storeButton:hover {
+  transform: translateY(-6px) scale(1.05);
+  filter: drop-shadow(0 18px 30px rgba(15, 60, 125, 0.35));
+}
+
+/* ================= Visual ================= */
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.heroVisual::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(
+    circle,
+    rgba(15, 60, 125, 0.22) 0%,
+    rgba(15, 60, 125, 0) 70%
+  );
+  filter: blur(22px);
+  z-index: -1;
+}
+
+.heroSwiper {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= Image ================= */
+.heroImg {
+  width: 260px;
+  max-width: 100%;
+  display: block;
+  transform: translateY(-32px) rotate(-1.5deg);
+  animation: float 4.2s ease-in-out infinite;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.35));
+}
+
+/* ================= Animations ================= */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= Tablet ================= */
+@media (max-width: 992px) {
+  .hero {
+    padding: 90px 0 70px;
+  }
+
+  .heroRight {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .storeButtons {
+    justify-content: center;
+  }
+
+  .heroImg {
+    width: 240px;
+    transform: none;
+  }
+}
+
+/* ================= Mobile ================= */
+@media (max-width: 576px) {
+  .hero {
+    padding: 80px 0 90px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero .row {
+    flex-direction: column-reverse;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 15px;
+    max-width: 92%;
+    margin: 14px auto 0;
+  }
+
+  .storeButton img {
+    width: 130px;
+  }
+
+  .heroImg {
+    width: 200px;
+    animation: float 3.8s ease-in-out infinite;
+  }
+}

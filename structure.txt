@@ -1,0 +1,37 @@
+Folder PATH listing
+Volume serial number is 000000B3 CD7E:0B30
+C:\USERS\USER\ONEDRIVE\DESKTOP\KOMY\MAZAD-ARABITY\SRC
+ÃÄÄÄassets
+³   ÃÄÄÄcss
+³   ÃÄÄÄfont
+³   ³   ÀÄÄÄCairo
+³   ³       ÀÄÄÄstatic
+³   ÀÄÄÄimages
+³       ÃÄÄÄapp
+³       ÃÄÄÄbanners
+³       ÃÄÄÄcars
+³       ÃÄÄÄcategories
+³       ÀÄÄÄlogo
+ÃÄÄÄcomponents
+³   ÃÄÄÄsections
+³   ³   ÃÄÄÄAbout
+³   ³   ÃÄÄÄCategories
+³   ³   ÃÄÄÄDownload
+³   ³   ÃÄÄÄFeatures
+³   ³   ÃÄÄÄHero
+³   ³   ÃÄÄÄOffers
+³   ³   ÃÄÄÄPolicy
+³   ³   ÀÄÄÄScreenshots
+³   ÀÄÄÄui
+³       ÃÄÄÄFooter
+³       ÃÄÄÄHeader
+³       ÀÄÄÄLoader
+ÃÄÄÄdata
+ÃÄÄÄlayouts
+ÃÄÄÄPages
+³   ÃÄÄÄHome
+³   ÃÄÄÄNotFound
+³   ÃÄÄÄPrivacy
+³   ÃÄÄÄReturns
+³   ÀÄÄÄTerms
+ÀÄÄÄroutes

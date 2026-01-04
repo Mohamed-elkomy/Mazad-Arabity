@@ -1,0 +1,154 @@
+/* ================= Base Navbar ================= */
+.navbar {
+  background-color: var(--white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  min-height: 64px;
+  z-index: 1030;
+}
+
+/* ================= Logo ================= */
+.brandLogo {
+  width: 150px;
+  max-width: 60vw;
+  height: auto;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+/* ================= Desktop Nav Links ================= */
+.navLink {
+  text-decoration: none !important;
+  color: var(--text-main) !important;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 6px 16px !important;
+  transition: background-color var(--transition), color var(--transition),
+    transform var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--primary) !important;
+  transform: translateY(-1px);
+  background: linear-gradient(
+    90deg,
+    var(--primary-light) 0%,
+    rgba(15, 60, 125, 0.12) 100%
+  );
+}
+
+.active {
+  color: var(--primary) !important;
+  font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    var(--primary-light) 0%,
+    rgba(15, 60, 125, 0.18) 100%
+  );
+}
+
+/* ================= Navbar Toggler ================= */
+.navbarToggler {
+  box-shadow: none !important;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.navbarToggler:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.navbarToggler:active {
+  transform: scale(0.95);
+}
+
+/* ================= Offcanvas ================= */
+.offcanvas {
+  width: 260px !important;
+  direction: rtl !important;
+  text-align: right;
+}
+
+/* ================= Offcanvas Header ================= */
+.offcanvasHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.offcanvasLogo {
+  width: 120px;
+  height: auto;
+}
+
+/* ================= Offcanvas Body ================= */
+.offcanvasBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+}
+
+.offcanvasLink {
+  font-size: 16px !important;
+  color: var(--text-main) !important;
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.offcanvasLink:hover {
+  color: var(--primary) !important;
+  background-color: var(--primary-light);
+}
+
+.offcanvasLink.active {
+  font-weight: 600;
+  color: var(--primary) !important;
+  background-color: var(--primary-light);
+}
+
+/* ================= Accessibility ================= */
+.navLink:focus-visible,
+.offcanvasLink:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  font-weight: 600;
+}
+
+/* ================= Responsive ================= */
+
+/* Tablet */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 8px 0;
+  }
+
+  .brandLogo {
+    width: 120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 6px 0;
+  }
+
+  .brandLogo {
+    width: 105px;
+  }
+
+  .offcanvas {
+    width: 85% !important;
+  }
+
+  .offcanvasLink {
+    font-size: 17px !important;
+    padding: 14px;
+    text-decoration: none !important;
+  }
+}
