@@ -73,7 +73,7 @@
   opacity: 0.9;
 }
 
-/* ================= Responsive ================= */
+/*  Responsive  */
 @media (max-width: 992px) {
   .footer {
     padding: 48px 28px 28px;

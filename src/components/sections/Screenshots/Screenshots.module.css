@@ -1,11 +1,11 @@
-/* ================= Section ================= */
+/*  Section  */
 .screensSection {
   padding: 100px 0 110px;
   background: var(--white);
   overflow: hidden;
 }
 
-/* ================= Titles ================= */
+/*  Titles  */
 .title {
   font-size: clamp(26px, 3vw, 34px);
   font-weight: 800;
@@ -23,13 +23,13 @@
   margin-inline: auto;
 }
 
-/* ================= Swiper ================= */
+/*  Swiper  */
 .screensSwiper {
   width: 100%;
   overflow: visible; /* مهم جدًا للحركة */
 }
 
-/* ================= Card ================= */
+/*  Card  */
 .screenCard {
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@
   isolation: isolate;
 }
 
-/* ================= Phone Frame ================= */
+/*  Phone Frame  */
 .phoneFrame {
   max-width: 280px;
   margin: 0 auto;
@@ -72,7 +72,7 @@
   transform: translateY(-10px);
 }
 
-/* ================= Image ================= */
+/*  Image  */
 .screenImg {
   width: 100%;
   height: auto;
@@ -87,7 +87,7 @@
   z-index: 4;
 }
 
-/* ================= Animations ================= */
+/*  Animations  */
 @keyframes floatScreen {
   0% {
     transform: translateY(0);
@@ -100,7 +100,7 @@
   }
 }
 
-/* ================= Tablet ================= */
+/*  Tablet  */
 @media (max-width: 992px) {
   .phoneFrame {
     max-width: 250px;
@@ -111,7 +111,7 @@
   }
 }
 
-/* ================= Mobile ================= */
+/*  Mobile  */
 @media (max-width: 576px) {
   .screensSection {
     padding: 80px 0 90px;
@@ -131,7 +131,7 @@
   }
 }
 
-/* ================= Reduced Motion ================= */
+/*  Reduced Motion  */
 @media (prefers-reduced-motion: reduce) {
   .screenImg {
     animation: none;

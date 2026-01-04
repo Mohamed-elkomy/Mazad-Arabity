@@ -28,7 +28,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className="container">
         <div className="row align-items-center">
-          {/* ================= TEXT ================= */}
+          {/*  TEXT  */}
           <div className={`col-lg-6 ${styles.heroRight}`}>
             <h1 className={styles.title}>
               {t("hero.title")}
@@ -73,7 +73,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* ================= VISUAL ================= */}
+          {/*  VISUAL  */}
           <div className={`col-lg-6  ${styles.heroVisual}`}>
             <Swiper
               modules={[Autoplay]}

@@ -1,4 +1,4 @@
-/* ================= Overlay ================= */
+/*  Overlay  */
 .loaderOverlay {
   position: fixed;
   inset: 0;
@@ -13,7 +13,7 @@
   isolation: isolate;
 }
 
-/* ================= Card ================= */
+/*  Card  */
 .loaderCard {
   background: var(--bg-primary);
   border-radius: var(--radius-lg);
@@ -47,14 +47,14 @@
   z-index: -1;
 }
 
-/* ================= Logo ================= */
+/*  Logo  */
 .loaderLogo {
   width: 140px;
   max-width: 60vw;
   height: auto;
 }
 
-/* ================= Dot ================= */
+/*  Dot  */
 .loaderDot {
   width: 14px;
   height: 14px;
@@ -64,7 +64,7 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
-/* ================= Text ================= */
+/*  Text  */
 .loaderText {
   font-size: 14px;
   font-weight: 500;
@@ -73,7 +73,7 @@
   letter-spacing: 0.2px;
 }
 
-/* ================= Animations ================= */
+/*  Animations  */
 @keyframes pulse {
   0%,
   100% {
@@ -98,7 +98,7 @@
   }
 }
 
-/* ================= Reduced Motion ================= */
+/*  Reduced Motion  */
 @media (prefers-reduced-motion: reduce) {
   .loaderCard {
     animation: none;

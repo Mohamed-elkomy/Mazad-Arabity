@@ -7,7 +7,7 @@ import logo from "../../../assets/images/logo/logo.png";
 import styles from "./Navbar.module.css";
 import buttons from "../../../assets/styles/buttons.module.css";
 
-/* ================= WhatsApp Links ================= */
+/*  WhatsApp Links  */
 const WHATSAPP_MESSAGES = {
     ar: "أهلاً، حابب اتواصل مع مزاد عربيتى",
     en: "Hello, I would like to contact My Car Auction",
@@ -28,7 +28,7 @@ export default function Navbar() {
     const currentLang = i18n.language;
     const isAr = currentLang === "ar";
 
-    /* ================= Offcanvas Init ================= */
+    /*  Offcanvas Init  */
     useEffect(() => {
         const el = offcanvasRef.current;
         if (!el) return;
@@ -49,12 +49,12 @@ export default function Navbar() {
         };
     }, []);
 
-    /* ================= Close on Route Change ================= */
+    /*  Close on Route Change  */
     useEffect(() => {
         offcanvasInstanceRef.current?.hide();
     }, [pathname]);
 
-    /* ================= Language Toggle ================= */
+    /*  Language Toggle  */
     const toggleLanguage = () => {
         const nextLang = isAr ? "en" : "ar";
         i18n.changeLanguage(nextLang);
@@ -66,7 +66,7 @@ export default function Navbar() {
 
     return (
         <>
-            {/* ================= Navbar ================= */}
+            {/*  Navbar  */}
             <nav
                 role="navigation"
                 aria-label="Main navigation"
@@ -124,7 +124,7 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            {/* ================= Offcanvas ================= */}
+            {/*  Offcanvas  */}
             <div
                 ref={offcanvasRef}
                 className={`offcanvas offcanvas-end ${styles.offcanvas}`}
@@ -167,7 +167,7 @@ export default function Navbar() {
     );
 }
 
-/* ================= Helpers ================= */
+/*  Helpers  */
 
 function NavItem({ to, label }) {
     return (

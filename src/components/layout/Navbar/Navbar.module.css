@@ -1,4 +1,4 @@
-/* ================= Base Navbar ================= */
+/*  Base Navbar  */
 .navbar {
   position: sticky;
   top: 0;
@@ -17,7 +17,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* ================= Logo ================= */
+/*  Logo  */
 .brandLogo {
   width: 150px;
   max-width: 60vw;
@@ -31,7 +31,7 @@
   transform: scale(1.03);
 }
 
-/* ================= Language Button ================= */
+/*  Language Button  */
 .langBtn {
   background: transparent;
   border: 1px solid var(--border-color);
@@ -48,7 +48,7 @@
   color: var(--primary);
 }
 
-/* ================= Desktop Nav Links ================= */
+/*  Desktop Nav Links  */
 .navLink {
   text-decoration: none !important;
   color: var(--text-main) !important;
@@ -80,7 +80,7 @@
   );
 }
 
-/* ================= Navbar Toggler ================= */
+/*  Navbar Toggler  */
 .navbarToggler {
   box-shadow: none !important;
   padding: 8px 10px;
@@ -97,7 +97,7 @@
   transform: scale(0.95);
 }
 
-/* ================= Offcanvas ================= */
+/*  Offcanvas  */
 .offcanvas {
   width: 280px !important;
   direction: rtl;
@@ -105,7 +105,7 @@
   background: var(--white);
 }
 
-/* ================= Offcanvas Header ================= */
+/*  Offcanvas Header  */
 .offcanvasHeader {
   display: flex;
   align-items: center;
@@ -118,7 +118,7 @@
   height: auto;
 }
 
-/* ================= Offcanvas Body ================= */
+/*  Offcanvas Body  */
 .offcanvasBody {
   display: flex;
   flex-direction: column;
@@ -148,7 +148,7 @@
   background-color: var(--primary-light);
 }
 
-/* ================= Accessibility ================= */
+/*  Accessibility  */
 .navLink:focus-visible,
 .offcanvasLink:focus-visible,
 .langBtn:focus-visible {
@@ -156,7 +156,7 @@
   outline-offset: 3px;
 }
 
-/* ================= Responsive ================= */
+/*  Responsive  */
 
 /* Tablet */
 @media (max-width: 991px) {

@@ -13,7 +13,7 @@ import {
 import styles from "./Features.module.css";
 import { FEATURES } from "../../../data/features";
 
-/* ================= Icon Map ================= */
+/*  Icon Map  */
 const ICONS = {
   gavel: <FaGavel />,
   car: <FaCar />,

@@ -1,4 +1,4 @@
-/* ================= Section ================= */
+/*  Section  */
 .categoriesSection {
   padding: 120px 0;
   background: linear-gradient(180deg, var(--gray) 0%, #f9f9f9 100%);
@@ -19,7 +19,7 @@
   pointer-events: none;
 }
 
-/* ================= Titles ================= */
+/*  Titles  */
 .title {
   font-size: clamp(28px, 3vw, 36px);
   font-weight: 800;
@@ -33,7 +33,7 @@
   text-align: center;
 }
 
-/* ================= Swiper ================= */
+/*  Swiper  */
 .categoriesSwiper {
   padding: 16px 0 40px;
   overflow: visible;
@@ -43,7 +43,7 @@
   width: auto;
 }
 
-/* ================= Card ================= */
+/*  Card  */
 .card {
   background: var(--white);
   border-radius: 20px;
@@ -79,7 +79,7 @@
   opacity: 1;
 }
 
-/* ================= Image ================= */
+/*  Image  */
 .image {
   width: 88px;
   height: 88px;
@@ -91,7 +91,7 @@
   transform: scale(1.08);
 }
 
-/* ================= Text ================= */
+/*  Text  */
 .cardTitle {
   font-size: 18px;
   font-weight: 700;
@@ -103,7 +103,7 @@
   color: var(--text-muted);
 }
 
-/* ================= Mobile ================= */
+/*  Mobile  */
 @media (max-width: 576px) {
   .card {
     min-width: 175px;

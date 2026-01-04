@@ -1,6 +1,6 @@
-/* =========================
+/* 
    Fonts – IBM Plex Sans Arabic
-========================= */
+ */
 @font-face {
   font-family: "IBM Plex Sans Arabic";
   src: url("/src/assets/fonts/IBM/IBMPlexSansArabic-Regular.ttf")
@@ -28,9 +28,9 @@
   font-display: swap;
 }
 
-/* =========================
+/* 
    Design Tokens – Mazad Arabity
-========================= */
+ */
 :root {
   /* Brand */
   --primary: #0f3c7d;
@@ -79,9 +79,9 @@
   direction: ltr; /* سيب الحسابات صح */
 }
 
-/* =========================
+/* 
    Reset
-========================= */
+ */
 *,
 *::before,
 *::after {
@@ -110,18 +110,18 @@ body {
   flex-direction: column;
 }
 
-/* =========================
+/* 
    Layout
-========================= */
+ */
 .container {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 16px;
 }
 
-/* =========================
+/* 
    Typography
-========================= */
+ */
 h1,
 h2,
 h3 {
@@ -148,9 +148,9 @@ p {
   line-height: 1.8;
 }
 
-/* =========================
+/* 
    Links & Media
-========================= */
+ */
 a {
   text-decoration: none;
   color: inherit;
@@ -165,9 +165,9 @@ svg {
   max-width: 100%;
 }
 
-/* =========================
+/* 
    Buttons (Custom – Bootstrap-safe)
-========================= */
+ */
 button {
   font-family: inherit;
   border: none;
@@ -191,9 +191,9 @@ button {
   transform: translateY(-2px);
 }
 
-/* =========================
+/* 
    Utilities
-========================= */
+ */
 .bg-light {
   background: var(--gray);
 }
@@ -207,9 +207,9 @@ button {
   text-align: left;
 }
 
-/* =========================
+/* 
    Accessibility
-========================= */
+ */
 :focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 3px;
