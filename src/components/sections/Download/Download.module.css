@@ -17,7 +17,7 @@
 
 .downloadLeft {
   width: 55%;
-  text-align: right;
+  text-align: start;
   position: relative;
   z-index: 1;
 }

@@ -67,7 +67,7 @@
 
 /* Lists */
 .content ul {
-  padding-right: 18px;
+  padding-inline-start: 18px;
   margin-top: 12px;
 }
 

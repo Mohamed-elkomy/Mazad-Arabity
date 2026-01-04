@@ -101,7 +101,7 @@
 .offcanvas {
   width: 280px !important;
   direction: rtl;
-  text-align: right;
+  text-align: start;
   background: var(--white);
 }
 

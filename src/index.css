@@ -68,6 +68,16 @@
   --fs-body: 16px;
   --fs-small: 14px;
 }
+:root {
+  --dir: 1;
+}
+
+[dir="rtl"] {
+  --dir: -1;
+}
+.swiper {
+  direction: ltr; /* سيب الحسابات صح */
+}
 
 /* =========================
    Reset
