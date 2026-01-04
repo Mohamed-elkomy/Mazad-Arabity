@@ -12,14 +12,14 @@
     box-shadow var(--transition-fast);
 }
 
-/* Optional shadow on scroll (لو حبيت تزود class بالـ JS) */
+/* Optional shadow on scroll  */
 .navbar.scrolled {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 /*  Logo  */
 .brandLogo {
-  width: 150px;
+  width: 100px;
   max-width: 60vw;
   height: auto;
   cursor: pointer;
@@ -176,7 +176,7 @@
   }
 
   .brandLogo {
-    width: 105px;
+    width: 80px;
   }
 
   .offcanvas {
