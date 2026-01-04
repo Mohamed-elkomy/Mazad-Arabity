@@ -1,53 +1,69 @@
-# FIX – Mobile & Accessories Store Landing Page 📱⚡
 
-A modern, responsive landing page for **FIX**, an online store specialized in selling mobile phones and original accessories.  
-The project focuses on clean UI, smooth animations, performance, and a strong user experience across all devices.
+# 🚗 My Car Auction – مزاد عربيتى
+
+### Modern Car Auction & Browsing Platform
+
+A modern, responsive **bilingual (Arabic / English)** web application for browsing and categorizing cars in a clean, professional auction-style experience.
+The project focuses on **strong UI/UX, RTL/LTR support, smooth animations, scalability, and performance**, tailored for the Arabic market.
 
 ---
 
 ## 🚀 Live Demo
-🔗 https://github.com/Mohamed-elkomy/Fix-landing-page
+
+🔗 [https://github.com/Mohamed-elkomy/Mazad-Arabity](https://github.com/Mohamed-elkomy/Mazad-Arabity))
 
 ---
 
 ## 🧠 Project Overview
 
-**FIX** is an e-commerce landing page designed to promote a mobile application for buying smartphones and accessories online.
+**My Car Auction (مزاد عربيتى)** is a front-end web application designed to present cars in a structured, visually appealing way, similar to real-world car auction and marketplace platforms.
 
-The landing page highlights:
-- App features
-- Categories
-- Screenshots
-- Offers
-- Download links (App Store & Google Play)
-- Policies & legal pages
-- WhatsApp direct contact
+The platform highlights:
+
+* Car categories & types
+* Modern landing experience
+* Clean navigation structure
+* Multilingual support (Arabic / English)
+* Policy & informational pages
+* Ready architecture for future backend integration
+
+---
+
+## 🌍 Language & Direction Support
+
+* Full **Arabic / English** support using i18n
+* Automatic layout switching:
+
+  * RTL for Arabic
+  * LTR for English
+* Seamless UI consistency across both directions
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **React.js**
-- **React Router DOM**
-- **Swiper.js**
-- **Bootstrap 5**
-- **CSS Modules**
-- **Animate.css**
-- **Vite**
+* **React.js**
+* **Vite**
+* **React Router DOM**
+* **Swiper.js**
+* **CSS Modules**
+* **Animate.css**
+* **i18next (react-i18next)**
 
 ---
 
 ## ✨ Features
 
-- Fully responsive design (Mobile / Tablet / Desktop)
-- Smooth sliders using Swiper
-- Animated UI elements
-- Lazy loading pages with `React.lazy`
-- Global Loader during page navigation
-- Error Boundary for runtime errors
-- WhatsApp direct contact button
-- Clean and scalable folder structure
-- SEO-friendly semantic HTML
+* Fully responsive design (Mobile / Tablet / Desktop)
+* Clean and scalable folder structure
+* Car categories slider with cinematic animations
+* Smooth UI interactions and hover effects
+* RTL / LTR layout handling
+* Lazy-loaded pages using `React.lazy`
+* Global loading indicator
+* Scroll-to-top behavior
+* SEO-friendly semantic HTML structure
+* Ready for backend & API integration
 
 ---
 
@@ -57,64 +73,74 @@ The landing page highlights:
 src/
 ├── assets/
 │   ├── css/
+│   ├── fonts/
 │   ├── icons/
 │   └── images/
-│       ├── app/
-│       ├── banners/
+│       ├── cars/
 │       ├── categories/
 │       └── logo/
 │
 ├── components/
 │   ├── sections/
-│   │   ├── About
-│   │   ├── Categories
-│   │   ├── Download
-│   │   ├── Features
 │   │   ├── Hero
-│   │   ├── Offers
+│   │   ├── Categories
+│   │   ├── Features
 │   │   ├── Policy
-│   │   └── Screenshots
+│   │   └── Footer
 │   │
 │   └── ui/
 │       ├── Header
-│       ├── Footer
-│       └── Loader
+│       ├── Loader
+│       └── ScrollTop
 │
-├── data/
-│   ├── categories.js
-│   ├── features.js
-│   └── screenshots.js
+├── i18n/
+│   ├── locales/
+│   │   ├── ar/
+│   │   └── en/
+│   └── i18n.js
 │
 ├── layouts/
 │   └── MainLayout.jsx
 │
-├── Pages/
+├── pages/
 │   ├── Home
-│   ├── Contact
-│   ├── Privacy
-│   ├── Returns
+│   ├── PrivacyPolicy
 │   ├── Terms
 │   └── NotFound
 │
 ├── routes/
-│   ├── Router.jsx
-│   ├── ScrollToTop.jsx
-│   └── ErrorBoundary.jsx
+│   └── AppRouter.jsx
 │
 ├── App.jsx
 └── main.jsx
+```
 
-👨‍💻 Author
+---
 
-Mohamed Magdy Elkomy
+## 🚧 Current Status
 
-🔗 LinkedIn:
-https://www.linkedin.com/in/mohamed-magdy-elkomy/
+* Front-end development in progress
+* UI & UX foundations completed
+* Multilingual system fully implemented
 
-🔗 GitHub:
-https://github.com/Mohamed-elkomy
+---
 
-📄 License
+## 👨‍💻 Author
 
-This project is licensed under the MIT License.
+**Mohamed Magdy Elkomy**
+
+🔗 LinkedIn
+[https://www.linkedin.com/in/mohamed-magdy-elkomy/](https://www.linkedin.com/in/mohamed-magdy-elkomy/)
+
+🔗 GitHub
+[https://github.com/Mohamed-elkomy](https://github.com/Mohamed-elkomy)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
 You are free to use, modify, and distribute it.
+
+
+قولّي… ونطلعها 🔥
