@@ -17,26 +17,26 @@
   cursor: pointer;
   user-select: none;
 
-  transition: background var(--transition), transform var(--transition-fast),
-    box-shadow var(--transition-fast);
+  will-change: transform;
+  transform: translateZ(0);
+
+  transition: background var(--transition), transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
-/* Hover */
 .primaryBtn:hover {
-  background: #0c2f61; /* أغمق سنة من primary */
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-soft);
+  background: #0c2f61;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(12, 47, 97, 0.35);
   color: var(--white);
 }
 
-/* Active */
 .primaryBtn:active {
-  transform: translateY(0);
-  box-shadow: none;
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 4px 12px rgba(12, 47, 97, 0.25);
 }
 
-/* Focus (Accessibility) */
 .primaryBtn:focus-visible {
-  outline: 2px solid var(--primary-light);
-  outline-offset: 3px;
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-light), 0 10px 28px rgba(12, 47, 97, 0.35);
 }

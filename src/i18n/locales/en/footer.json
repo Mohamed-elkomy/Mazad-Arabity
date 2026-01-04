@@ -1,0 +1,27 @@
+{
+    "rights": "All rights reserved",
+    "links": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms & Conditions"
+    },
+    "brandAlt": "My Car Auction – Car Auction Platform",
+    "about": {
+        "title": "About My Car Auction",
+        "description": "My Car Auction is a digital platform specialized in car auctions, enabling transparent and real-time buying and selling in a secure and user-friendly environment."
+    },
+    "links": {
+        "title": "Quick Links",
+        "home": "Home",
+        "privacy": "Privacy Policy",
+        "returns": "Return Policy",
+        "terms": "Terms & Conditions"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "phone": "+20 100 000 0000",
+        "email": "support@mycarauction.com",
+        "location": "Cairo, Egypt"
+    },
+    "copyright": "© 2025 My Car Auction – All rights reserved",
+    "scrollTop": "Back to top"
+}

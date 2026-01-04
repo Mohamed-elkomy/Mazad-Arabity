@@ -1,11 +1,12 @@
 import { Component } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { withTranslation } from "react-i18next";
 
 import buttons from "../assets/styles/buttons.module.css";
 
 export default function ErrorBoundaryWrapper({ children }) {
   const location = useLocation();
-  return <ErrorBoundary location={location}>{children}</ErrorBoundary>;
+  return <ErrorBoundaryWithI18n location={location}>{children}</ErrorBoundaryWithI18n>;
 }
 
 class ErrorBoundary extends Component {
@@ -29,19 +30,21 @@ class ErrorBoundary extends Component {
   }
 
   render() {
+    const { t } = this.props;
+
     if (this.state.hasError) {
       return (
-        <section className="container text-center py-5" dir="rtl">
+        <section className="container text-center py-5">
           <h1 className="fw-bold mb-3">
-            حصلت مشكلة غير متوقعة
+            {t("error.title")}
           </h1>
 
           <p className="text-muted mb-4">
-            متقلقش، تقدر ترجع للصفحة الرئيسية وتكمّل تصفحك عادي.
+            {t("error.description")}
           </p>
 
           <Link to="/" className={buttons.primaryBtn}>
-            الرجوع للرئيسية
+            {t("error.backHome")}
           </Link>
         </section>
       );
@@ -50,3 +53,5 @@ class ErrorBoundary extends Component {
     return this.props.children;
   }
 }
+
+const ErrorBoundaryWithI18n = withTranslation("common")(ErrorBoundary);

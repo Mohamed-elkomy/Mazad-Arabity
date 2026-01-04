@@ -1,0 +1,24 @@
+{
+    "brandAlt": "My Car Auction",
+    "nav": {
+        "home": "Home",
+        "privacy": "Privacy Policy",
+        "returns": "Return Policy",
+        "terms": "Terms & Conditions",
+        "contact": "Contact Us"
+    },
+    "error": {
+        "title": "Something went wrong",
+        "description": "Don’t worry, you can go back to the home page and continue browsing.",
+        "backHome": "Back to Home"
+    },
+    "notFound": {
+        "title": "This road doesn’t lead to an auction",
+        "description": "The page you’re looking for doesn’t exist or has been moved. Head back home and explore the latest auctions 🚗",
+        "backHome": "Back to Home"
+    },
+    "loader": {
+        "aria": "Loading content",
+        "text": "Loading..."
+    }
+}

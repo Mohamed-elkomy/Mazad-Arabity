@@ -14,22 +14,24 @@ const TermsPage = lazy(() => import("../pages/Terms/Terms"));
 const NotFoundPage = lazy(() => import("../pages/NotFound/NotFound"));
 
 export default function RouterApp() {
-    return (
-        <ErrorBoundaryWrapper>
-            <RouteLoader>
-                <Routes>
-                    {/* Layout */}
-                    <Route element={<MainLayout />}>
-                        <Route index element={<HomePage />} />
-                        <Route path="returns" element={<ReturnPage />} />
-                        <Route path="privacy" element={<PrivacyPage />} />
-                        <Route path="terms" element={<TermsPage />} />
-                    </Route>
+  return (
+    <ErrorBoundaryWrapper>
+      <RouteLoader>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            {/* Layout */}
+            <Route element={<MainLayout />}>
+              <Route index element={<HomePage />} />
+              <Route path="returns" element={<ReturnPage />} />
+              <Route path="privacy" element={<PrivacyPage />} />
+              <Route path="terms" element={<TermsPage />} />
+            </Route>
 
-                    {/* 404 */}
-                    <Route path="*" element={<NotFoundPage />} />
-                </Routes>
-            </RouteLoader>
-        </ErrorBoundaryWrapper>
-    );
+            {/* 404 */}
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+      </RouteLoader>
+    </ErrorBoundaryWrapper>
+  );
 }

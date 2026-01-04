@@ -4,12 +4,15 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 
+// i18n 
+import "./i18n";
+
+// Global Styles
+import "./index.css";
+
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
-// Global styles
-import "./index.css";
 
 // Animations
 import "animate.css";

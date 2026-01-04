@@ -1,7 +1,9 @@
 /* ================= Section ================= */
 .categoriesSection {
-  padding: 90px 0;
+  padding: 110px 0 120px; /* مساحة أكبر للحركة */
   background: var(--gray);
+  position: relative;
+  overflow: visible; /* مهم جدًا */
 }
 
 /* ================= Titles ================= */
@@ -16,14 +18,15 @@
 .subtitle {
   font-size: 20px;
   color: var(--text-muted);
-  margin-bottom: 46px;
+  margin-bottom: 56px; /* مسافة أوسع قبل السوايبر */
   text-align: center;
 }
 
 /* ================= Swiper ================= */
 .categoriesSwiper {
   width: 100%;
-  overflow: hidden;
+  overflow: visible; /* يخلي الكروت تطلع برا */
+  padding: 10px 0 24px; /* مساحة للحركة */
 }
 
 .slide {
@@ -44,10 +47,11 @@
 
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
+  will-change: transform;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px); /* حركة أوضح */
   box-shadow: var(--shadow-soft);
 }
 
@@ -71,17 +75,21 @@
   .image {
     width: 82px;
   }
+
+  .categoriesSection {
+    padding: 90px 0 100px;
+  }
 }
 
 /* ================= Mobile ================= */
 @media (max-width: 576px) {
   .categoriesSection {
-    padding: 70px 0;
+    padding: 80px 0 90px;
   }
 
   .subtitle {
     font-size: 18px;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
 
   .card {

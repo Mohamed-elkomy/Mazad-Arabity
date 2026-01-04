@@ -1,9 +1,20 @@
 /* ================= Base Navbar ================= */
 .navbar {
-  background-color: var(--white);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   min-height: 64px;
-  z-index: 1030;
+  z-index: 1100;
+  transition: background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+/* Optional shadow on scroll (لو حبيت تزود class بالـ JS) */
+.navbar.scrolled {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* ================= Logo ================= */
@@ -13,6 +24,28 @@
   height: auto;
   cursor: pointer;
   border-radius: 12px;
+  transition: transform var(--transition-fast);
+}
+
+.brandLogo:hover {
+  transform: scale(1.03);
+}
+
+/* ================= Language Button ================= */
+.langBtn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.langBtn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
 }
 
 /* ================= Desktop Nav Links ================= */
@@ -22,7 +55,7 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 999px;
-  padding: 6px 16px !important;
+  padding: 8px 18px !important;
   transition: background-color var(--transition), color var(--transition),
     transform var(--transition-fast);
 }
@@ -50,14 +83,14 @@
 /* ================= Navbar Toggler ================= */
 .navbarToggler {
   box-shadow: none !important;
-  padding: 6px 8px;
-  border-radius: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
   transition: background-color var(--transition-fast),
     transform var(--transition-fast);
 }
 
 .navbarToggler:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 .navbarToggler:active {
@@ -66,9 +99,10 @@
 
 /* ================= Offcanvas ================= */
 .offcanvas {
-  width: 260px !important;
-  direction: rtl !important;
+  width: 280px !important;
+  direction: rtl;
   text-align: right;
+  background: var(--white);
 }
 
 /* ================= Offcanvas Header ================= */
@@ -76,7 +110,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 18px;
 }
 
 .offcanvasLogo {
@@ -89,20 +123,23 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 16px;
+  padding: 18px;
 }
 
 .offcanvasLink {
   font-size: 16px !important;
   color: var(--text-main) !important;
-  padding: 12px 14px;
-  border-radius: 10px;
-  transition: color var(--transition), background-color var(--transition);
+  padding: 14px 16px;
+  border-radius: 12px;
+  transition: color var(--transition), background-color var(--transition),
+    transform var(--transition-fast);
+  text-decoration: none !important;
 }
 
 .offcanvasLink:hover {
   color: var(--primary) !important;
   background-color: var(--primary-light);
+  transform: translateX(-2px);
 }
 
 .offcanvasLink.active {
@@ -113,10 +150,10 @@
 
 /* ================= Accessibility ================= */
 .navLink:focus-visible,
-.offcanvasLink:focus-visible {
+.offcanvasLink:focus-visible,
+.langBtn:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 3px;
-  font-weight: 600;
 }
 
 /* ================= Responsive ================= */
@@ -124,7 +161,7 @@
 /* Tablet */
 @media (max-width: 991px) {
   .navbar {
-    padding: 8px 0;
+    padding: 10px 0;
   }
 
   .brandLogo {
@@ -135,7 +172,7 @@
 /* Mobile */
 @media (max-width: 576px) {
   .navbar {
-    padding: 6px 0;
+    padding: 8px 0;
   }
 
   .brandLogo {
@@ -143,12 +180,11 @@
   }
 
   .offcanvas {
-    width: 85% !important;
+    width: 88% !important;
   }
 
   .offcanvasLink {
     font-size: 17px !important;
-    padding: 14px;
-    text-decoration: none !important;
+    padding: 16px;
   }
 }

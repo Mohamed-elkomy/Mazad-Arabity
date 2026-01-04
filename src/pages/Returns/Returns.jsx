@@ -1,90 +1,106 @@
+import { useTranslation } from "react-i18next";
 import PolicyCard from "../../components/sections/Policy/PolicyCard";
 import styles from "../../assets/styles/PolicyPages.module.css";
 
-const WHATSAPP_LINK = (msg) =>
+const getWhatsappLink = (msg) =>
     `https://wa.me/201000000000?text=${encodeURIComponent(msg)}`;
 
 export default function ReturnPolicyPage() {
+    const { t } = useTranslation("policy");
+
+    const whatsappLink = getWhatsappLink(
+        t("returns.contact.whatsappMessage")
+    );
+
     return (
         <section className={styles.policyContainer}>
-            <h1
-                className={`${styles.pageTitle} animate__animated animate__fadeInDown`}
-            >
-                سياسة الاسترجاع والاسترداد
+            <h1 className={`${styles.pageTitle} animate__animated animate__fadeInDown`}>
+                {t("returns.pageTitle")}
             </h1>
 
-            <PolicyCard title="مقدمة">
+            <PolicyCard title={t("returns.intro.title")}>
+                <p>{t("returns.intro.content")}</p>
+            </PolicyCard>
+
+            <PolicyCard title={t("returns.eligible.title")}>
                 <p>
-                    توضح سياسة الاسترجاع والاسترداد في{" "}
-                    <strong>مزاد عربيتى</strong> آلية التعامل مع الاعتراضات أو طلبات
-                    الإلغاء المتعلقة بالمزايدات أو عمليات الشراء الناتجة عنها، وذلك
-                    لضمان الشفافية وحفظ حقوق جميع الأطراف.
+                    {t("returns.eligible.items", { returnObjects: true }).map(
+                        (item, index) => (
+                            <span key={index}>
+                                • {item}
+                                <br />
+                            </span>
+                        )
+                    )}
                 </p>
             </PolicyCard>
 
-            <PolicyCard title="1. الحالات المؤهلة لتقديم طلب استرجاع">
+            <PolicyCard title={t("returns.conditions.title")}>
                 <p>
-                    • في حال وجود خطأ تقني أثناء المزايدة أدى إلى نتيجة غير صحيحة.<br />
-                    • في حال ثبوت معلومات غير دقيقة أو مضللة عن السيارة من قبل البائع.<br />
-                    • في حال إلغاء المزايدة من قبل إدارة المنصة لأسباب تنظيمية أو قانونية.<br />
-                    • في حال عدم التزام أحد الأطراف بشروط المزايدة المعتمدة.
+                    {t("returns.conditions.items", { returnObjects: true }).map(
+                        (item, index) => (
+                            <span key={index}>
+                                • {item}
+                                <br />
+                            </span>
+                        )
+                    )}
                 </p>
             </PolicyCard>
 
-            <PolicyCard title="2. شروط قبول طلب الاسترجاع">
+            <PolicyCard title={t("returns.process.title")}>
                 <p>
-                    • تقديم الطلب خلال مدة لا تتجاوز 48 ساعة من انتهاء المزايدة.<br />
-                    • تقديم مستندات أو أدلة تدعم سبب الاعتراض.<br />
-                    • عدم إتمام نقل الملكية أو استلام السيارة في حال طلب الإلغاء.<br />
-                    • الالتزام الكامل بشروط وأحكام المنصة.
+                    {t("returns.process.items", { returnObjects: true }).map(
+                        (item, index) => (
+                            <span key={index}>
+                                • {item}
+                                <br />
+                            </span>
+                        )
+                    )}
                 </p>
             </PolicyCard>
 
-            <PolicyCard title="3. آلية تقديم طلب الاسترجاع">
+            <PolicyCard title={t("returns.refund.title")}>
                 <p>
-                    • من خلال حساب المستخدم داخل المنصة.<br />
-                    • التواصل مع فريق دعم مزاد عربيتى.<br />
-                    • توضيح رقم المزايدة وسبب الطلب بشكل واضح.
+                    {t("returns.refund.items", { returnObjects: true }).map(
+                        (item, index) => (
+                            <span key={index}>
+                                • {item}
+                                <br />
+                            </span>
+                        )
+                    )}
                 </p>
             </PolicyCard>
 
-            <PolicyCard title="4. سياسة الاسترداد المالي">
+            <PolicyCard title={t("returns.excluded.title")}>
                 <p>
-                    • يتم رد أي مبالغ مستحقة خلال مدة من 3 إلى 7 أيام عمل.<br />
-                    • يتم الاسترداد بنفس وسيلة الدفع المستخدمة.<br />
-                    • قد يتم خصم رسوم إدارية في بعض الحالات وفقًا لسياسة المنصة.
+                    {t("returns.excluded.items", { returnObjects: true }).map(
+                        (item, index) => (
+                            <span key={index}>
+                                • {item}
+                                <br />
+                            </span>
+                        )
+                    )}
                 </p>
             </PolicyCard>
 
-            <PolicyCard title="5. الحالات غير المشمولة بالاسترجاع">
-                <p>
-                    • المزايدات المكتملة التي تم تنفيذ جميع مراحلها بنجاح.<br />
-                    • الحالات الناتجة عن تراجع المشتري دون سبب مشروع.<br />
-                    • الطلبات المقدمة بعد انتهاء المدة المحددة.<br />
-                    • النزاعات الخارجة عن نطاق مسؤولية المنصة.
-                </p>
+            <PolicyCard title={t("returns.changes.title")}>
+                <p>{t("returns.changes.content")}</p>
             </PolicyCard>
 
-            <PolicyCard title="6. تعديل السياسة">
+            <PolicyCard title={t("returns.contact.title")}>
                 <p>
-                    تحتفظ إدارة <strong>مزاد عربيتى</strong> بحق تعديل سياسة
-                    الاسترجاع والاسترداد في أي وقت، ويتم نشر التحديثات على الموقع
-                    أو داخل التطبيق وتصبح سارية فور نشرها.
-                </p>
-            </PolicyCard>
-
-            <PolicyCard title="7. تواصل معنا">
-                <p>
-                    في حال وجود أي استفسار بخصوص سياسة الاسترجاع، يمكنك التواصل معنا عبر{" "}
+                    {t("returns.contact.content")}{" "}
                     <a
-                        href={WHATSAPP_LINK(
-                            "استفسار بخصوص سياسة الاسترجاع والاسترداد في منصة مزاد عربيتى"
-                        )}
+                        href={whatsappLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ fontWeight: 600 }}
                     >
-                        التواصل معنا
+                        {t("returns.contact.cta")}
                     </a>
                     .
                 </p>

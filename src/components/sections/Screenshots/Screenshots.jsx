@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -6,15 +7,17 @@ import { SCREENS } from "../../../data/screenshots";
 import styles from "./Screenshots.module.css";
 
 export default function Screenshots() {
+    const { t } = useTranslation("home");
+
     return (
         <section className={styles.screensSection}>
             <div className="container">
                 <h2 className={styles.title}>
-                    نظرة داخل تطبيق مزاد عربيتى
+                    {t("screenshots.title")}
                 </h2>
 
                 <p className={styles.subtitle}>
-                    واجهة سهلة تخلّيك تتابع المزايدات وتشارك فيها خطوة بخطوة
+                    {t("screenshots.subtitle")}
                 </p>
 
                 <Swiper
@@ -34,13 +37,15 @@ export default function Screenshots() {
                     }}
                     className={styles.screensSwiper}
                 >
-                    {SCREENS.map((item) => (
+                    {SCREENS.map((item, index) => (
                         <SwiperSlide key={item.id}>
                             <div className={styles.screenCard}>
                                 <div className={styles.phoneFrame}>
                                     <img
                                         src={item.image}
-                                        alt={item.alt}
+                                        alt={t("screenshots.itemAlt", {
+                                            index: index + 1,
+                                        })}
                                         loading="lazy"
                                         className={styles.screenImg}
                                     />

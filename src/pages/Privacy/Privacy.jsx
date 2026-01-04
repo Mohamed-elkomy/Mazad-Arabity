@@ -1,121 +1,101 @@
-import styles from "../../assets/styles/PolicyPages.module.css";
+import { useTranslation } from "react-i18next";
 import PolicyCard from "../../components/sections/Policy/PolicyCard";
+import styles from "../../assets/styles/PolicyPages.module.css";
 
-const WHATSAPP_LINK = (msg) =>
+const getWhatsappLink = (msg) =>
   `https://wa.me/201000000000?text=${encodeURIComponent(msg)}`;
 
 export default function PrivacyPage() {
+  const { t } = useTranslation("policy");
+
+  const whatsappLink = getWhatsappLink(
+    t("privacy.contact.whatsappMessage")
+  );
+
   return (
     <section className={styles.policyContainer}>
-      <h1
-        className={`${styles.pageTitle} animate__animated animate__fadeInDown`}
-      >
-        سياسة الخصوصية
+      <h1 className={`${styles.pageTitle} animate__animated animate__fadeInDown`}>
+        {t("privacy.pageTitle")}
       </h1>
 
-      <PolicyCard title="1. المعلومات التي نقوم بجمعها">
+      <PolicyCard title={t("privacy.collect.title")}>
+        <p>{t("privacy.collect.intro")}</p>
         <p>
-          تقوم منصة <strong>مزاد عربيتى</strong> بجمع بعض البيانات بهدف
-          تحسين تجربة المستخدم وضمان بيئة مزايدات آمنة وشفافة، وتشمل هذه
-          البيانات:
-        </p>
-
-        <p>
-          • البيانات الشخصية مثل الاسم، رقم الهاتف، والبريد الإلكتروني.<br />
-          • بيانات الحساب والمشاركة في المزايدات.<br />
-          • البيانات الفنية مثل نوع الجهاز، المتصفح، وعنوان IP.<br />
-          • بيانات المزايدات والمعاملات المرتبطة بها.<br />
-          • بيانات الموقع الجغرافي في حال منح الإذن.
+          {t("privacy.collect.items", { returnObjects: true }).map(
+            (item, index) => (
+              <span key={index}>
+                • {item}
+                <br />
+              </span>
+            )
+          )}
         </p>
       </PolicyCard>
 
-      <PolicyCard title="2. كيفية استخدام المعلومات">
-        <p>يتم استخدام البيانات التي نقوم بجمعها للأغراض التالية:</p>
+      <PolicyCard title={t("privacy.usage.title")}>
+        <p>{t("privacy.usage.intro")}</p>
         <p>
-          • تشغيل المنصة وإدارة المزايدات بشكل صحيح.<br />
-          • تحسين تجربة المستخدم وتطوير الخدمات.<br />
-          • التواصل مع المستخدمين بخصوص المزايدات أو الحساب.<br />
-          • توفير الدعم الفني وخدمة العملاء.<br />
-          • الالتزام بالمتطلبات القانونية والتنظيمية.
+          {t("privacy.usage.items", { returnObjects: true }).map(
+            (item, index) => (
+              <span key={index}>
+                • {item}
+                <br />
+              </span>
+            )
+          )}
         </p>
       </PolicyCard>
 
-      <PolicyCard title="3. حماية البيانات">
-        <p>
-          تلتزم إدارة <strong>مزاد عربيتى</strong> بحماية بيانات المستخدمين
-          باستخدام إجراءات أمان مناسبة، بما في ذلك التشفير ومنع الوصول غير
-          المصرح به.
-        </p>
-
-        <p>
-          لا يتم مشاركة البيانات إلا مع أطراف موثوقة عند الضرورة، مثل مزودي
-          خدمات الدفع أو الجهات القانونية المختصة.
-        </p>
+      <PolicyCard title={t("privacy.security.title")}>
+        <p>{t("privacy.security.content")}</p>
+        <p>{t("privacy.security.note")}</p>
       </PolicyCard>
 
-      <PolicyCard title="4. ملفات تعريف الارتباط (Cookies)">
-        <p>
-          تستخدم المنصة ملفات تعريف الارتباط لتحسين الأداء وتحليل الاستخدام.
-          يمكن للمستخدم التحكم في إعدادات الكوكيز من خلال إعدادات المتصفح
-          أو الجهاز المستخدم.
-        </p>
+      <PolicyCard title={t("privacy.cookies.title")}>
+        <p>{t("privacy.cookies.content")}</p>
       </PolicyCard>
 
-      <PolicyCard title="5. مشاركة البيانات مع أطراف خارجية">
-        <p>قد يتم مشاركة بعض البيانات مع:</p>
+      <PolicyCard title={t("privacy.sharing.title")}>
+        <p>{t("privacy.sharing.intro")}</p>
         <p>
-          • مزودي خدمات الدفع الإلكتروني.<br />
-          • الجهات القانونية أو التنظيمية عند الالتزام بالقانون.<br />
-          • شركاء تقنيين لدعم تشغيل المنصة.
+          {t("privacy.sharing.items", { returnObjects: true }).map(
+            (item, index) => (
+              <span key={index}>
+                • {item}
+                <br />
+              </span>
+            )
+          )}
         </p>
-        <p>
-          لا يتم استخدام البيانات أو مشاركتها لأغراض تسويقية خارجية دون
-          موافقة المستخدم الصريحة.
-        </p>
+        <p>{t("privacy.sharing.note")}</p>
       </PolicyCard>
 
-      <PolicyCard title="6. حقوق المستخدم">
-        <p>
-          يحق للمستخدم الوصول إلى بياناته، تعديلها، طلب حذف الحساب، أو
-          الاعتراض على معالجة البيانات، كما يمكنه طلب نسخة من البيانات
-          المحفوظة لديه وفقًا للأنظمة المعمول بها.
-        </p>
+      <PolicyCard title={t("privacy.rights.title")}>
+        <p>{t("privacy.rights.content")}</p>
       </PolicyCard>
 
-      <PolicyCard title="7. سياسة الاحتفاظ بالبيانات">
-        <p>
-          يتم الاحتفاظ بالبيانات طالما كان الحساب نشطًا أو حسب ما تقتضيه
-          القوانين المعمول بها، ويتم حذفها أو إخفاؤها عند إلغاء الحساب
-          ما لم يكن هناك التزام قانوني بالاحتفاظ بها.
-        </p>
+      <PolicyCard title={t("privacy.retention.title")}>
+        <p>{t("privacy.retention.content")}</p>
       </PolicyCard>
 
-      <PolicyCard title="8. خصوصية الأطفال">
-        <p>
-          لا تستهدف منصة <strong>مزاد عربيتى</strong> الأطفال دون سن 18
-          عامًا، ولا يتم جمع أي بيانات متعلقة بهم عن قصد.
-        </p>
+      <PolicyCard title={t("privacy.children.title")}>
+        <p>{t("privacy.children.content")}</p>
       </PolicyCard>
 
-      <PolicyCard title="9. تحديث سياسة الخصوصية">
-        <p>
-          قد يتم تحديث سياسة الخصوصية من وقت لآخر. استمرار استخدام المنصة
-          بعد نشر التحديثات يُعد موافقة على السياسة المعدّلة.
-        </p>
+      <PolicyCard title={t("privacy.updates.title")}>
+        <p>{t("privacy.updates.content")}</p>
       </PolicyCard>
 
-      <PolicyCard title="10. تواصل معنا">
+      <PolicyCard title={t("privacy.contact.title")}>
         <p>
-          في حال وجود أي استفسار بخصوص سياسة الخصوصية، يمكنك التواصل معنا عبر{" "}
+          {t("privacy.contact.content")}{" "}
           <a
-            href={WHATSAPP_LINK(
-              "استفسار بخصوص سياسة الخصوصية في منصة مزاد عربيتى"
-            )}
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             style={{ fontWeight: 600 }}
           >
-            التواصل معنا
+            {t("privacy.contact.cta")}
           </a>
           .
         </p>

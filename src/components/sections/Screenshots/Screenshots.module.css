@@ -1,7 +1,8 @@
 /* ================= Section ================= */
 .screensSection {
-  padding: 90px 0;
+  padding: 100px 0 110px;
   background: var(--white);
+  overflow: hidden;
 }
 
 /* ================= Titles ================= */
@@ -16,7 +17,7 @@
 .subtitle {
   font-size: 20px;
   color: var(--text-muted);
-  margin-bottom: 46px;
+  margin-bottom: 50px;
   text-align: center;
   max-width: 720px;
   margin-inline: auto;
@@ -25,7 +26,7 @@
 /* ================= Swiper ================= */
 .screensSwiper {
   width: 100%;
-  overflow: hidden;
+  overflow: visible; /* مهم جدًا للحركة */
 }
 
 /* ================= Card ================= */
@@ -33,19 +34,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  isolation: isolate;
 }
 
 /* ================= Phone Frame ================= */
 .phoneFrame {
-  max-width: 270px;
+  max-width: 280px;
   margin: 0 auto;
-  padding: 8px;
-  transition: transform var(--transition), box-shadow var(--transition);
+  padding: 10px;
+
+  background: transparent;
+  border-radius: 36px;
+
+  position: relative;
+  z-index: 3;
+
+  transition: transform var(--transition), box-shadow var(--transition-fast);
 }
 
+/* Glow خلف الصورة */
+.phoneFrame::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  background: radial-gradient(
+    circle,
+    rgba(15, 60, 125, 0.18) 0%,
+    rgba(15, 60, 125, 0) 70%
+  );
+  filter: blur(26px);
+  z-index: -1;
+}
+
+/* Hover subtle */
 .screenCard:hover .phoneFrame {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-soft);
+  transform: translateY(-10px);
 }
 
 /* ================= Image ================= */
@@ -53,30 +77,67 @@
   width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 28px;
+  border-radius: 30px;
   display: block;
-  filter: drop-shadow(0 5px 0px rgba(0, 0, 0, 0.28));
+
+  animation: floatScreen 5s ease-in-out infinite;
+  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.35));
+
+  position: relative;
+  z-index: 4;
+}
+
+/* ================= Animations ================= */
+@keyframes floatScreen {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* ================= Tablet ================= */
 @media (max-width: 992px) {
   .phoneFrame {
-    max-width: 240px;
+    max-width: 250px;
+  }
+
+  .screenImg {
+    animation-duration: 4.4s;
   }
 }
 
 /* ================= Mobile ================= */
 @media (max-width: 576px) {
   .screensSection {
-    padding: 70px 0;
+    padding: 80px 0 90px;
   }
 
   .subtitle {
     font-size: 18px;
-    margin-bottom: 34px;
+    margin-bottom: 36px;
   }
 
   .phoneFrame {
     max-width: 220px;
+  }
+
+  .screenImg {
+    animation-duration: 3.8s;
+  }
+}
+
+/* ================= Reduced Motion ================= */
+@media (prefers-reduced-motion: reduce) {
+  .screenImg {
+    animation: none;
+  }
+
+  .screenCard:hover .phoneFrame {
+    transform: none;
   }
 }

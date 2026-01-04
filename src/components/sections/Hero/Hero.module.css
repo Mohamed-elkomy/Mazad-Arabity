@@ -1,11 +1,9 @@
-/* ================= Base ================= */
 .hero {
   padding: 110px 0 80px;
   overflow: hidden;
   animation: fadeUp 0.8s ease both;
 }
 
-/* ================= Text ================= */
 .heroRight {
   text-align: right;
 }
@@ -33,7 +31,6 @@
   margin: 18px 0 0;
 }
 
-/* ================= Store Buttons ================= */
 .storeButtons {
   margin-top: 32px;
   display: flex;
@@ -57,26 +54,36 @@
   filter: drop-shadow(0 18px 30px rgba(15, 60, 125, 0.35));
 }
 
-/* ================= Visual ================= */
 .heroVisual {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  isolation: isolate;
+  padding: 40px 0;
 }
 
 .heroVisual::before {
   content: "";
   position: absolute;
-  width: 280px;
-  height: 280px;
+  width: 360px;
+  height: 360px;
   background: radial-gradient(
     circle,
     rgba(15, 60, 125, 0.22) 0%,
     rgba(15, 60, 125, 0) 70%
   );
-  filter: blur(22px);
-  z-index: -1;
+  filter: blur(28px);
+  z-index: 1;
+}
+
+.phoneFrame {
+  width: 100%;
+  max-width: 320px;
+  overflow: visible;
+  border-radius: 32px;
+  position: relative;
+  z-index: 3;
 }
 
 .heroSwiper {
@@ -84,16 +91,22 @@
   max-width: 340px;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 3;
 }
 
-/* ================= Image ================= */
 .heroImg {
   width: 260px;
+  height: auto;
   max-width: 100%;
   display: block;
+
   transform: translateY(-32px) rotate(-1.5deg);
-  animation: float 4.2s ease-in-out infinite;
-  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.35));
+  animation: float 5s ease-in-out infinite;
+
+  filter: drop-shadow(0 px 0px rgba(0, 0, 0, 0.35));
+  position: relative;
+  z-index: 4;
 }
 
 /* ================= Animations ================= */
@@ -102,7 +115,7 @@
     transform: translateY(0) rotate(-1.5deg);
   }
   50% {
-    transform: translateY(-14px) rotate(-0.5deg);
+    transform: translateY(-18px) rotate(-0.5deg);
   }
   100% {
     transform: translateY(0) rotate(-1.5deg);
@@ -184,5 +197,10 @@
   .heroImg {
     width: 200px;
     animation: float 3.8s ease-in-out infinite;
+    margin-top: -20px;
+  }
+
+  .phoneFrame {
+    max-width: 260px;
   }
 }

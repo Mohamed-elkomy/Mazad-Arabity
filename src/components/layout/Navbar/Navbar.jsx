@@ -1,14 +1,22 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Offcanvas } from "bootstrap";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import logo from "../../../assets/images/logo/logo.png";
 import styles from "./Navbar.module.css";
 import buttons from "../../../assets/styles/buttons.module.css";
 
-/* ================= WhatsApp Link ================= */
-const WHATSAPP_LINK =
-    "https://wa.me/201000000000?text=%D8%A3%D9%87%D9%84%D8%A7%20%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A7%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20%D9%85%D8%B2%D8%A7%D8%AF%20%D8%B9%D8%B1%D8%A8%D9%8A%D8%AA%D9%89";
+/* ================= WhatsApp Links ================= */
+const WHATSAPP_MESSAGES = {
+    ar: "أهلاً، حابب اتواصل مع مزاد عربيتى",
+    en: "Hello, I would like to contact My Car Auction",
+};
+
+const getWhatsappLink = (lang) =>
+    `https://wa.me/201000000000?text=${encodeURIComponent(
+        WHATSAPP_MESSAGES[lang]
+    )}`;
 
 export default function Navbar() {
     const offcanvasRef = useRef(null);
@@ -16,6 +24,11 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const { pathname } = useLocation();
 
+    const { t, i18n } = useTranslation("common");
+    const currentLang = i18n.language;
+    const isAr = currentLang === "ar";
+
+    /* ================= Offcanvas Init ================= */
     useEffect(() => {
         const el = offcanvasRef.current;
         if (!el) return;
@@ -36,9 +49,20 @@ export default function Navbar() {
         };
     }, []);
 
+    /* ================= Close on Route Change ================= */
     useEffect(() => {
         offcanvasInstanceRef.current?.hide();
     }, [pathname]);
+
+    /* ================= Language Toggle ================= */
+    const toggleLanguage = () => {
+        const nextLang = isAr ? "en" : "ar";
+        i18n.changeLanguage(nextLang);
+        document.documentElement.lang = nextLang;
+        document.documentElement.dir = nextLang === "ar" ? "rtl" : "ltr";
+    };
+
+    const whatsappLink = getWhatsappLink(currentLang);
 
     return (
         <>
@@ -63,7 +87,7 @@ export default function Navbar() {
                     <Link className="navbar-brand" to="/">
                         <img
                             src={logo}
-                            alt="مزاد عربيتى"
+                            alt={t("brandAlt")}
                             className={styles.brandLogo}
                         />
                     </Link>
@@ -71,20 +95,31 @@ export default function Navbar() {
                     {/* Desktop Menu */}
                     <div className="collapse navbar-collapse d-none d-lg-flex">
                         <ul className="navbar-nav mx-auto gap-3">
-                            <NavItem to="/" label="الرئيسية" />
-                            <NavItem to="/privacy" label="سياسة الخصوصية" />
-                            <NavItem to="/returns" label="سياسة الاسترجاع" />
-                            <NavItem to="/terms" label="الشروط والأحكام" />
+                            <NavItem to="/" label={t("nav.home")} />
+                            <NavItem to="/privacy" label={t("nav.privacy")} />
+                            <NavItem to="/returns" label={t("nav.returns")} />
+                            <NavItem to="/terms" label={t("nav.terms")} />
                         </ul>
 
-                        <a
-                            href={WHATSAPP_LINK}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={buttons.primaryBtn}
-                        >
-                            تواصل معنا 💬
-                        </a>
+                        {/* Actions */}
+                        <div className="d-flex align-items-center gap-2">
+                            <button
+                                onClick={toggleLanguage}
+                                className={styles.langBtn}
+                                aria-label="Change language"
+                            >
+                                {isAr ? "EN" : "عربي"}
+                            </button>
+
+                            <a
+                                href={whatsappLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={buttons.primaryBtn}
+                            >
+                                {t("nav.contact")} 💬
+                            </a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -94,30 +129,37 @@ export default function Navbar() {
                 ref={offcanvasRef}
                 className={`offcanvas offcanvas-end ${styles.offcanvas}`}
                 tabIndex="-1"
-                dir="rtl"
+                dir={isAr ? "rtl" : "ltr"}
             >
                 <div className={styles.offcanvasHeader}>
                     <img
                         src={logo}
-                        alt="مزاد عربيتى"
+                        alt={t("brandAlt")}
                         className={styles.offcanvasLogo}
                     />
                 </div>
 
                 <div className={styles.offcanvasBody}>
-                    <MobileLink to="/" label="الرئيسية" />
-                    <MobileLink to="/privacy" label="سياسة الخصوصية" />
-                    <MobileLink to="/returns" label="سياسة الاسترجاع" />
-                    <MobileLink to="/terms" label="الشروط والأحكام" />
+                    <MobileLink to="/" label={t("nav.home")} />
+                    <MobileLink to="/privacy" label={t("nav.privacy")} />
+                    <MobileLink to="/returns" label={t("nav.returns")} />
+                    <MobileLink to="/terms" label={t("nav.terms")} />
+
+                    <button
+                        onClick={toggleLanguage}
+                        className={`w-100 mt-3 ${styles.langBtn}`}
+                    >
+                        {isAr ? "English" : "العربية"}
+                    </button>
 
                     <a
-                        href={WHATSAPP_LINK}
+                        href={whatsappLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`w-100 mt-3 ${buttons.primaryBtn}`}
                         onClick={() => offcanvasInstanceRef.current?.hide()}
                     >
-                        تواصل معنا 💬
+                        {t("nav.contact")} 💬
                     </a>
                 </div>
             </div>

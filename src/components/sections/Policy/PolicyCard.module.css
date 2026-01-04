@@ -2,13 +2,34 @@
 .policyCard {
   background: var(--white);
   border-radius: var(--radius-lg);
-  padding: 26px 28px;
-  margin-bottom: 26px;
+  padding: 28px 30px;
+  margin-bottom: 28px;
+
   box-shadow: var(--shadow-soft);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition-fast);
+
+  position: relative;
+  isolation: isolate;
 }
 
-/* Hover subtle (مش مزعج) */
+/* Accent subtle line */
+.policyCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--primary),
+    rgba(15, 60, 125, 0.25)
+  );
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  opacity: 0.85;
+}
+
+/* Hover – حركة خفيفة ومحترمة */
 .policyCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
@@ -31,10 +52,23 @@
   margin-top: 8px;
 }
 
-/* Lists (لو استخدمت ul بعد كده) */
+/* Links داخل المحتوى */
+.content a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(15, 60, 125, 0.35);
+}
+
+.content a:hover {
+  color: var(--primary-dark);
+  border-bottom-color: var(--primary);
+}
+
+/* Lists */
 .content ul {
   padding-right: 18px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .content li {
@@ -61,6 +95,10 @@
     border-radius: var(--radius-md);
   }
 
+  .policyCard::before {
+    width: 3px;
+  }
+
   .title {
     font-size: 18px;
   }
@@ -68,5 +106,14 @@
   .content p {
     font-size: 15px;
     line-height: 1.85;
+  }
+}
+
+/* ================= Reduced Motion ================= */
+@media (prefers-reduced-motion: reduce) {
+  .policyCard,
+  .policyCard:hover {
+    transition: none;
+    transform: none;
   }
 }

@@ -1,0 +1,172 @@
+{
+    "title": "Policies",
+    "lastUpdate": "Last updated",
+    "terms": {
+        "pageTitle": "Terms & Conditions",
+        "intro": {
+            "title": "Introduction",
+            "content": "These terms define the framework for using My Car Auction platform and its services."
+        },
+        "usage": {
+            "title": "Platform Usage",
+            "content": "Users must use the platform legally and avoid any misuse or manipulation."
+        },
+        "account": {
+            "title": "User Account",
+            "content": "Users must provide accurate information and keep their credentials secure."
+        },
+        "bidding": {
+            "title": "Bidding & Vehicles",
+            "content": "The platform enables live car auctions under defined rules."
+        },
+        "liability": {
+            "title": "Liability",
+            "content": "Users are responsible for verifying vehicle details before bidding."
+        },
+        "refund": {
+            "title": "Cancellation & Refund",
+            "content": "All cancellations are subject to",
+            "link": "Return & Refund Policy"
+        },
+        "ip": {
+            "title": "Intellectual Property",
+            "content": "All platform content is owned by My Car Auction."
+        },
+        "changes": {
+            "title": "Changes to Terms",
+            "content": "The platform reserves the right to modify these terms at any time."
+        },
+        "contact": {
+            "title": "Contact Us",
+            "content": "For inquiries regarding the terms, please contact us via",
+            "cta": "Contact Us",
+            "whatsappMessage": "Inquiry about Terms & Conditions on My Car Auction"
+        }
+    },
+    "returns": {
+        "pageTitle": "Return & Refund Policy",
+        "intro": {
+            "title": "Introduction",
+            "content": "This policy explains how return and refund requests are handled on My Car Auction."
+        },
+        "eligible": {
+            "title": "Eligible Cases",
+            "items": [
+                "Technical errors affecting auction results.",
+                "Misleading vehicle information.",
+                "Auction cancellation by the platform.",
+                "Violation of auction rules."
+            ]
+        },
+        "conditions": {
+            "title": "Conditions",
+            "items": [
+                "Requests must be submitted within 48 hours.",
+                "Supporting documents required.",
+                "Ownership transfer must not be completed.",
+                "Compliance with platform terms."
+            ]
+        },
+        "process": {
+            "title": "Request Process",
+            "items": [
+                "Via user account.",
+                "Contacting support.",
+                "Providing auction ID."
+            ]
+        },
+        "refund": {
+            "title": "Refund Policy",
+            "items": [
+                "Refunds within 3–7 business days.",
+                "Refund to original payment method.",
+                "Administrative fees may apply."
+            ]
+        },
+        "excluded": {
+            "title": "Non-Eligible Cases",
+            "items": [
+                "Completed auctions.",
+                "Buyer withdrawal.",
+                "Late requests.",
+                "External disputes."
+            ]
+        },
+        "changes": {
+            "title": "Policy Updates",
+            "content": "The platform may update this policy at any time."
+        },
+        "contact": {
+            "title": "Contact Us",
+            "content": "For inquiries regarding this policy, contact us via",
+            "cta": "Contact Us",
+            "whatsappMessage": "Inquiry about Return & Refund Policy on My Car Auction"
+        }
+    },
+    "privacy": {
+        "pageTitle": "Privacy Policy",
+        "collect": {
+            "title": "Information We Collect",
+            "intro": "We collect data to improve user experience and ensure secure auctions.",
+            "items": [
+                "Personal information.",
+                "Account data.",
+                "Technical data.",
+                "Auction data.",
+                "Location data."
+            ]
+        },
+        "usage": {
+            "title": "How We Use Information",
+            "intro": "Data is used to:",
+            "items": [
+                "Operate auctions.",
+                "Improve services.",
+                "Communicate with users.",
+                "Provide support.",
+                "Meet legal requirements."
+            ]
+        },
+        "security": {
+            "title": "Data Protection",
+            "content": "We protect user data with appropriate security measures.",
+            "note": "Shared only with trusted parties."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "content": "Cookies help improve performance."
+        },
+        "sharing": {
+            "title": "Data Sharing",
+            "intro": "Data may be shared with:",
+            "items": [
+                "Payment providers.",
+                "Legal authorities.",
+                "Technical partners."
+            ],
+            "note": "No external marketing use."
+        },
+        "rights": {
+            "title": "User Rights",
+            "content": "Users can access or delete their data."
+        },
+        "retention": {
+            "title": "Data Retention",
+            "content": "Data retained while account is active."
+        },
+        "children": {
+            "title": "Children’s Privacy",
+            "content": "Not intended for users under 18."
+        },
+        "updates": {
+            "title": "Policy Updates",
+            "content": "Policy may change over time."
+        },
+        "contact": {
+            "title": "Contact Us",
+            "content": "For privacy inquiries, contact us via",
+            "cta": "Contact Us",
+            "whatsappMessage": "Inquiry about Privacy Policy on My Car Auction"
+        }
+    }
+}

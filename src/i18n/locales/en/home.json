@@ -1,0 +1,60 @@
+{
+    "hero": {
+        "title": "Egypt’s First Car Auction Platform",
+        "subtitle": "Live Auctions • Real Prices • No Middlemen",
+        "brand": "My Car Auction",
+        "description": "Connects buyers and sellers in one place. Join live auctions, compare prices, and win your car transparently and securely.",
+        "appStoreAlt": "Download on App Store",
+        "googlePlayAlt": "Get it on Google Play",
+        "slideAlt": "App screen {{index}}"
+    },
+    "categories": {
+        "title": "Browse Auctions by Car Type",
+        "subtitle": "Choose a category and start bidding instantly",
+        "items": {
+            "sedan": "Sedan",
+            "compact": "Compact Sedan",
+            "luxury": "Luxury Sedan",
+            "hatchback": "Hatchback",
+            "coupe": "Coupe",
+            "convertible": "Convertible"
+        }
+    },
+    "features": {
+        "title": "Why Choose My Car Auction?",
+        "subtitle": "A trusted platform connecting buyers and sellers through real car auctions",
+        "items": {
+            "liveAuctions": {
+                "title": "Live Auctions",
+                "text": "Participate in real-time auctions with no middlemen."
+            },
+            "verifiedCars": {
+                "title": "Verified Cars",
+                "text": "All listings include clear and transparent vehicle details."
+            },
+            "securePayments": {
+                "title": "Secure Payments",
+                "text": "Protected payment systems ensuring buyer and seller rights."
+            },
+            "trustedCommunity": {
+                "title": "Trusted Community",
+                "text": "A safe platform with real and verified users."
+            }
+        }
+    },
+    "screenshots": {
+        "title": "Inside My Car Auction App",
+        "subtitle": "A simple interface that guides you through auctions step by step",
+        "itemAlt": "App screen {{index}}"
+    },
+    "download": {
+        "title": "Download My Car Auction App Now",
+        "description": "A secure and easy experience to join real car auctions. Compare prices, track bids, and win your car with confidence.",
+        "trust": "⭐ Trusted by over 10,000 users",
+        "previewAlt": "My Car Auction app preview",
+        "appStoreAlt": "Download on App Store",
+        "googlePlayAlt": "Get it on Google Play",
+        "appStoreAria": "Download My Car Auction app from App Store",
+        "googlePlayAria": "Download My Car Auction app from Google Play"
+    }
+}
