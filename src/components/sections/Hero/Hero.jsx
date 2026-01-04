@@ -5,9 +5,9 @@ import "swiper/css";
 import google from "../../../assets/images/logo/googleEn.png";
 import apple from "../../../assets/images/logo/appleEn.svg";
 
-import car1 from "../../../assets/images/cars/camry.png";
-import car2 from "../../../assets/images/cars/bmw4.png";
-import car3 from "../../../assets/images/cars/s-class.png";
+import car1 from "../../../assets/images/app/Splash.png";
+import car2 from "../../../assets/images/app/home.png";
+import car3 from "../../../assets/images/app/profile.png";
 
 import styles from "./Hero.module.css";
 

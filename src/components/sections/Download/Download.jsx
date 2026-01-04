@@ -1,6 +1,6 @@
 import google from "../../../assets/images/logo/googleAr.png";
 import apple from "../../../assets/images/logo/appleAr.svg";
-import frame from "../../../assets/images/app/logo.png";
+import frame from "../../../assets/images/app/Splash.png";
 
 import styles from "./Download.module.css";
 

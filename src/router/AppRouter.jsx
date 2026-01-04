@@ -16,22 +16,20 @@ const NotFoundPage = lazy(() => import("../pages/NotFound/NotFound"));
 export default function RouterApp() {
     return (
         <ErrorBoundaryWrapper>
-            <Suspense fallback={<Loader />}>
-                <RouteLoader>
-                    <Routes>
-                        {/* Layout */}
-                        <Route element={<MainLayout />}>
-                            <Route index element={<HomePage />} />
-                            <Route path="returns" element={<ReturnPage />} />
-                            <Route path="privacy" element={<PrivacyPage />} />
-                            <Route path="terms" element={<TermsPage />} />
-                        </Route>
+            <RouteLoader>
+                <Routes>
+                    {/* Layout */}
+                    <Route element={<MainLayout />}>
+                        <Route index element={<HomePage />} />
+                        <Route path="returns" element={<ReturnPage />} />
+                        <Route path="privacy" element={<PrivacyPage />} />
+                        <Route path="terms" element={<TermsPage />} />
+                    </Route>
 
-                        {/* 404 */}
-                        <Route path="*" element={<NotFoundPage />} />
-                    </Routes>
-                </RouteLoader>
-            </Suspense>
+                    {/* 404 */}
+                    <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+            </RouteLoader>
         </ErrorBoundaryWrapper>
     );
 }
