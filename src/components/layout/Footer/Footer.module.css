@@ -140,3 +140,48 @@
   outline: 2px solid #000;
   outline-offset: 3px;
 }
+/* Brmja Tech Branding - Fixed & Static */
+.devBrand {
+  position: static;
+  bottom: 24px;
+  inset-inline-start: 24px;
+
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+
+  z-index: 9998;
+}
+
+/* Logo */
+.devBrand img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+/* Website link */
+.devLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0a58ca;
+  text-decoration: none;
+}
+
+.devLink:hover {
+  text-decoration: underline;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .devBrand {
+    display: none;
+  }
+}

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FaArrowCircleUp } from "react-icons/fa";
 
 import logo from "../../../assets/images/logo/logo.png";
+import brmjaLogo from "../../../assets/images/logo/logo.svg";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -26,10 +27,7 @@ export default function Footer() {
 
     return (
         <>
-            <footer
-                className={styles.footer}
-                dir={isAr ? "rtl" : "ltr"}
-            >
+            <footer className={styles.footer} dir={isAr ? "rtl" : "ltr"}>
                 <div className="container">
                     <div className={styles.footerContent}>
                         {/* About */}
@@ -42,18 +40,10 @@ export default function Footer() {
                         <div className={styles.footerColumn}>
                             <h3>{t("links.title")}</h3>
                             <ul>
-                                <li>
-                                    <Link to="/">{t("links.home")}</Link>
-                                </li>
-                                <li>
-                                    <Link to="/privacy">{t("links.privacy")}</Link>
-                                </li>
-                                <li>
-                                    <Link to="/returns">{t("links.returns")}</Link>
-                                </li>
-                                <li>
-                                    <Link to="/terms">{t("links.terms")}</Link>
-                                </li>
+                                <li><Link to="/">{t("links.home")}</Link></li>
+                                <li><Link to="/privacy">{t("links.privacy")}</Link></li>
+                                <li><Link to="/returns">{t("links.returns")}</Link></li>
+                                <li><Link to="/terms">{t("links.terms")}</Link></li>
                             </ul>
                         </div>
 
@@ -66,9 +56,7 @@ export default function Footer() {
                         </div>
 
                         {/* Logo */}
-                        <div
-                            className={`${styles.footerColumn} ${styles.footerLogo}`}
-                        >
+                        <div className={`${styles.footerColumn} ${styles.footerLogo}`}>
                             <img
                                 src={logo}
                                 alt={t("brandAlt")}
@@ -84,6 +72,25 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
+
+            {/* Brmja Tech Branding (Fixed - No Animation) */}
+            <div className={styles.devBrand}>
+                <img
+                    src={brmjaLogo}
+                    alt={t("devAlt")}
+                    loading="lazy"
+                />
+
+                <a
+                    href="https://brmja.tech/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.devLink}
+                >
+                    brmja.tech
+                </a>
+            </div>
+
 
             {/* Scroll To Top */}
             <button
