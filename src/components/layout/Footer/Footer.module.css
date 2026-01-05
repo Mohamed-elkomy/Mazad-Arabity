@@ -23,7 +23,6 @@
   font-weight: 800;
   margin-bottom: 18px;
   color: var(--text-primary);
-  letter-spacing: -0.3px;
 }
 
 .footerColumn p {
@@ -60,46 +59,48 @@
   opacity: 0.95;
 }
 
-.footer hr {
+.divider {
   border: none;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   margin: 36px 0 20px;
 }
 
+/* ===== Copyright Inline ===== */
 .copyright {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.brandInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
   font-size: 13.5px;
   color: var(--text-secondary);
+  text-decoration: none;
   opacity: 0.9;
+
+  transition: opacity var(--transition-fast);
 }
 
-/*  Responsive  */
-@media (max-width: 992px) {
-  .footer {
-    padding: 48px 28px 28px;
-  }
-
-  .footerContent {
-    gap: 32px;
-  }
+.brandInline:hover {
+  opacity: 1;
 }
 
-@media (max-width: 480px) {
-  .footer {
-    padding: 40px 20px 26px;
-  }
-
-  .footerColumn {
-    width: 100%;
-    text-align: start;
-  }
-
-  .footerLogo img {
-    margin: 8px auto 0;
-    display: block;
-  }
+.brandInline img {
+  width: 200px;
+  height: auto;
+  display: block;
 }
 
+.brandInline strong {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ===== Scroll To Top ===== */
 .scrollTopBtn {
   position: fixed;
   bottom: 28px;
@@ -136,52 +137,25 @@
   transform: translateY(-6px);
 }
 
-.scrollTopBtn:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: 3px;
-}
-/* Brmja Tech Branding - Fixed & Static */
-.devBrand {
-  position: static;
-  bottom: 24px;
-  inset-inline-start: 24px;
-
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 16px 20px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
-
-  z-index: 9998;
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .footer {
+    padding: 48px 28px 28px;
+  }
 }
 
-/* Logo */
-.devBrand img {
-  width: 140px;
-  height: auto;
-  display: block;
-}
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 20px 26px;
+  }
 
-/* Website link */
-.devLink {
-  font-size: 13px;
-  font-weight: 600;
-  color: #0a58ca;
-  text-decoration: none;
-}
+  .footerColumn {
+    width: 100%;
+    text-align: start;
+  }
 
-.devLink:hover {
-  text-decoration: underline;
-}
-
-/* Hide on mobile */
-@media (max-width: 768px) {
-  .devBrand {
-    display: none;
+  .footerLogo img {
+    margin: 8px auto 0;
+    display: block;
   }
 }

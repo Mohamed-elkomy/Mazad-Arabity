@@ -1,5 +1,4 @@
 {
-    "rights": "All rights reserved",
     "brandAlt": "Brmja Tech – Software Development Company",
     "about": {
         "title": "About Brmja Tech",
@@ -18,8 +17,7 @@
         "email": "support@brmjatech.com",
         "location": "Cairo, Egypt"
     },
-    "copyright": "© 2025 Brmja Tech. All rights reserved",
+    "rights": "All rights reserved",
     "scrollTop": "Back to top",
-    "devCopyright": "© 2025 Brmja Tech. All rights reserved",
     "devAlt": "Brmja Tech – Software Development Company"
 }

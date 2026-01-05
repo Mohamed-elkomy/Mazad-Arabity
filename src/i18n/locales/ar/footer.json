@@ -1,5 +1,4 @@
 {
-    "rights": "جميع الحقوق محفوظة",
     "brandAlt": "Brmja Tech – شركة تطوير برمجيات",
     "about": {
         "title": "عن Brmja Tech",
@@ -18,8 +17,7 @@
         "email": "support@brmjatech.com",
         "location": "القاهرة – مصر"
     },
-    "copyright": "© 2025 Brmja Tech – جميع الحقوق محفوظة",
+    "rights": "جميع الحقوق محفوظة",
     "scrollTop": "العودة لأعلى الصفحة",
-    "devCopyright": "© 2025 Brmja Tech – جميع الحقوق محفوظة",
     "devAlt": "Brmja Tech – شركة تطوير برمجيات"
 }

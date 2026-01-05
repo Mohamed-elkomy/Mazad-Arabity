@@ -55,7 +55,7 @@ export default function Footer() {
                             <p>📍 {t("contact.location")}</p>
                         </div>
 
-                        {/* Logo */}
+                        {/* Main Logo */}
                         <div className={`${styles.footerColumn} ${styles.footerLogo}`}>
                             <img
                                 src={logo}
@@ -67,35 +67,31 @@ export default function Footer() {
 
                     <hr className={styles.divider} />
 
+                    {/* Copyright + Logo (Translated) */}
                     <div className={styles.copyright}>
-                        {t("copyright")}
+                        <a
+                            href="https://brmja.tech/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.brandInline}
+                        >
+                            <img
+                                src={brmjaLogo}
+                                alt={t("devAlt")}
+                                loading="lazy"
+                            />
+
+                            <span>
+                                © 2025 <strong>Brmja Tech</strong> – {t("rights")}
+                            </span>
+                        </a>
                     </div>
                 </div>
             </footer>
 
-            {/* Brmja Tech Branding (Fixed - No Animation) */}
-            <div className={styles.devBrand}>
-                <img
-                    src={brmjaLogo}
-                    alt={t("devAlt")}
-                    loading="lazy"
-                />
-
-                <a
-                    href="https://brmja.tech/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.devLink}
-                >
-                    brmja.tech
-                </a>
-            </div>
-
-
             {/* Scroll To Top */}
             <button
-                className={`${styles.scrollTopBtn} ${showButton ? styles.show : ""
-                    }`}
+                className={`${styles.scrollTopBtn} ${showButton ? styles.show : ""}`}
                 onClick={scrollToTop}
                 aria-label={t("scrollTop")}
             >
