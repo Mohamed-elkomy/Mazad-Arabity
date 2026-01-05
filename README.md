@@ -10,7 +10,7 @@ The project focuses on **strong UI/UX, RTL/LTR support, smooth animations, scala
 
 ## 🚀 Live Demo
 
-🔗 [https://github.com/Mohamed-elkomy/Mazad-Arabity](https://github.com/Mohamed-elkomy/Mazad-Arabity))
+🔗 [https://github.com/Mohamed-elkomy/My-Auction-Car](https://github.com/Mohamed-elkomy/My-Auction-Car))
 
 ---
 
